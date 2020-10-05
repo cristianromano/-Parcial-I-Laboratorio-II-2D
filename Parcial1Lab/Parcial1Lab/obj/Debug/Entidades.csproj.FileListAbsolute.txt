@@ -1,0 +1,11 @@
+C:\Users\Cristian\source\repos\Parcial1Lab\Parcial1Lab\bin\Debug\Parcial1Lab.dll
+C:\Users\Cristian\source\repos\Parcial1Lab\Parcial1Lab\bin\Debug\Parcial1Lab.pdb
+C:\Users\Cristian\source\repos\Parcial1Lab\Parcial1Lab\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\source\repos\Parcial1Lab\Parcial1Lab\obj\Debug\Parcial1Lab.dll
+C:\Users\Cristian\source\repos\Parcial1Lab\Parcial1Lab\obj\Debug\Parcial1Lab.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\Parcial1Lab\bin\Debug\Parcial1Lab.dll
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\Parcial1Lab\bin\Debug\Parcial1Lab.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\Parcial1Lab\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\Parcial1Lab\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\Parcial1Lab\obj\Debug\Parcial1Lab.dll
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\Parcial1Lab\obj\Debug\Parcial1Lab.pdb
