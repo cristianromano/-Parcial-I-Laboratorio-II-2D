@@ -1,0 +1,51 @@
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.csprojAssemblyReference.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.csproj.GenerateResource.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.csproj.CopyComplete
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\bin\Debug\ParcialLabII.exe.config
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\bin\Debug\ParcialLabII.exe
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\bin\Debug\ParcialLabII.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.exe
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.FormularioHistorialVentas.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.FormularioVentas.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.InicioSesion.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.NuevosProductos.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.PaginaPrincipal.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\obj\Debug\ParcialLabII.Properties.Resources.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\bin\Debug\Entidades.dll
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\bin\Debug\Entidades.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\bin\Debug\ParcialLabII.exe.config
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\bin\Debug\ParcialLabII.exe
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\bin\Debug\ParcialLabII.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\bin\Debug\Entidades.dll
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\bin\Debug\Entidades.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.csprojAssemblyReference.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.FormularioHistorialVentas.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.FormularioVentas.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.InicioSesion.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.NuevosProductos.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.PaginaPrincipal.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.Properties.Resources.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.csproj.GenerateResource.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.csproj.CopyComplete
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.exe
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\PaginaPrincipal\obj\Debug\ParcialLabII.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\bin\Debug\ParcialLabII.exe.config
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\bin\Debug\ParcialLabII.exe
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\bin\Debug\ParcialLabII.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\bin\Debug\Entidades.dll
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\bin\Debug\Entidades.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.csprojAssemblyReference.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.FormularioHistorialVentas.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.FormularioVentas.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.InicioSesion.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.NuevosProductos.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.PaginaPrincipal.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.Properties.Resources.resources
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.csproj.GenerateResource.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.csproj.CopyComplete
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.exe
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.pdb
