@@ -57,6 +57,8 @@ namespace ParcialLabII
             sonidoCaja = new SoundPlayer();
             zulma = new SoundPlayer();
             apu = new SoundPlayer();
+
+            this.dtgEmpleado.Columns[2].Visible = false;
         }
 
         private void transparenteLabels()
@@ -147,7 +149,6 @@ namespace ParcialLabII
             this.txtStock.Text = MiProducto.Stock.ToString();
 
             this.txtPrecioItem.Text = MiProducto.Precio.ToString();
-
         }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
@@ -210,9 +211,9 @@ namespace ParcialLabII
 
         private void dtgEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.txtNombreVendedor.Text = dtgEmpleado.CurrentRow.Cells[2].Value.ToString();
+            this.txtNombreVendedor.Text = dtgEmpleado.CurrentRow.Cells[3].Value.ToString();
             this.txtNombreVendedor.Enabled = false;
-            this.txtApellidoVendedor.Text = dtgEmpleado.CurrentRow.Cells[3].Value.ToString();
+            this.txtApellidoVendedor.Text = dtgEmpleado.CurrentRow.Cells[4].Value.ToString();
             this.txtApellidoVendedor.Enabled = false;
             this.txtIDVendedor.Text = dtgEmpleado.CurrentRow.Cells[0].Value.ToString();
             this.txtIDVendedor.Enabled = false;

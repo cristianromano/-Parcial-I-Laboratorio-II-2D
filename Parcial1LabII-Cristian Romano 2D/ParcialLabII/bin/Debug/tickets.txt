@@ -1,23 +1,31 @@
 ------------------------------
 TICKET DE COMPRA KWIK E MART
 ------------------------------
-Hora: 07/10/2020 2:58:44
+Hora: 07/10/2020 4:45:25
 ------------------------------
-Empleado: Kobe,Bryant 
+Empleado: Jill,Harper 
 ------------------------------
-ID: 354
+ID: 356
 ------------------------------
  
  
 ------------------------------
 Productos vendidos x listado 
 ------------------------------
-Item: Oreo x Precio: 30,25
+Item: Merengadas x Precio: 30,33
 ------------------------------
-Item: Oreo x Precio: 30,25
+Item: Merengadas x Precio: 30,33
 ------------------------------
-Item: Oreo x Precio: 30,25
+Item: Merengadas x Precio: 30,33
 ------------------------------
-Precio Final: 90,75
+Item: Surtido x Precio: 60,45
+------------------------------
+Item: Surtido x Precio: 60,45
+------------------------------
+Item: Rumba x Precio: 80,75
+------------------------------
+Item: Rumba x Precio: 80,75
+------------------------------
+Precio Final: 373,39
 ------------------------------
 GRACIAS POR TU COMPRA REY

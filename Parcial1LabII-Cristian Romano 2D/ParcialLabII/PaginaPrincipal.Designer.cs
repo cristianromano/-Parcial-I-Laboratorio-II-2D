@@ -144,9 +144,9 @@
             // 
             this.btnAgregarEmpleado.Location = new System.Drawing.Point(332, 397);
             this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
-            this.btnAgregarEmpleado.Size = new System.Drawing.Size(121, 23);
+            this.btnAgregarEmpleado.Size = new System.Drawing.Size(121, 40);
             this.btnAgregarEmpleado.TabIndex = 8;
-            this.btnAgregarEmpleado.Text = "Agregar Empleado";
+            this.btnAgregarEmpleado.Text = "Agregar/Eliminar Empleado";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
             this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 

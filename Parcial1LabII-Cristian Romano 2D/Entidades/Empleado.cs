@@ -26,7 +26,7 @@ namespace Entidades
 
         public int ID { get => id; }
         public ETurno Turno { get => turno; }
-        private double Dni { get => dni; }
+        public double Dni { get => dni; }
         public override string registro()
         {
             return $"Se ha registrado a Empleado ID: {this.ID} , Nombre: {this.nombre}";
@@ -44,12 +44,10 @@ namespace Entidades
 
             return false;
         }
-
         public static bool operator !=(List<Empleado> empleados, Empleado empleado)
         {
             return !(empleados == empleado);
         }
-
         public static bool operator +(List<Empleado> empleados, Empleado empleado)
         {
             bool retorno = false;
@@ -58,6 +56,23 @@ namespace Entidades
             {
                 empleados.Add(empleado);
                 retorno = true;
+            }
+
+            return retorno;
+        }     
+        
+        public static bool operator -(List<Empleado> empleados, Empleado empleado)
+        {
+            bool retorno = false;
+
+            foreach (Empleado item in empleados)
+            {
+                if(item.dni == empleado.dni)
+                {
+                    empleados.Remove(item);
+                    retorno = true;
+                    break;
+                }
             }
 
             return retorno;
