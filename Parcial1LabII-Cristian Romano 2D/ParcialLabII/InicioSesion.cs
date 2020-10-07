@@ -17,14 +17,10 @@ namespace ParcialLabII
     {
         int intentos = 3;
         
-
         public InicioSesion()
         {
             InitializeComponent();
-           
-
         }
-
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
@@ -36,17 +32,11 @@ namespace ParcialLabII
 
             if (user == "Administrador" && pass == "sistema01")
             {
-
-                
-
                 PaginaPrincipal accesoPaginaPrincipal = new PaginaPrincipal();
 
                 accesoPaginaPrincipal.Show();
 
                 this.Hide();
-
-
-
             }
 
             else if (intentos == 0)
@@ -81,15 +71,11 @@ namespace ParcialLabII
 
                 if (user == "Administrador" && pass == "sistema01")
                 {
-
-                   
-
                     PaginaPrincipal accesoPaginaPrincipal = new PaginaPrincipal();
 
                     accesoPaginaPrincipal.Show();
 
                     this.Hide();
-
                 }
 
                 else if (intentos == 0)
@@ -113,14 +99,11 @@ namespace ParcialLabII
 
         private void InicioSesion_Load(object sender, EventArgs e)
         {
-           
-
             this.lbUsuario.Parent = pictureBox1;
             this.lbUsuario.BackColor = Color.Transparent; 
 
             this.lbPassword.Parent = pictureBox1;
             this.lbPassword.BackColor = Color.Transparent;
-
         }
 
         private void InicioSesion_FormClosing(object sender, FormClosingEventArgs e)

@@ -14,8 +14,8 @@ namespace ParcialLabII
     public partial class NuevosProductos : Form
     {
         int conteo;
-       private Producto MiProducto;
 
+        private Producto MiProducto;
 
         public Producto Producto
         {
@@ -44,16 +44,18 @@ namespace ParcialLabII
             this.lbNombre.Parent = pictureBox1;
             this.lbNombre.BackColor = Color.Transparent;
 
-
             this.lbCodigo.Parent = pictureBox1;
             this.lbCodigo.BackColor = Color.Transparent;
-
 
             this.lbPrecio.Parent = pictureBox1;
             this.lbPrecio.BackColor = Color.Transparent;
 
             this.lbStock.Parent = pictureBox1;
             this.lbStock.BackColor = Color.Transparent;
+
+            this.dtgAgregarProducto.DataSource = Comercio.Productos;
+            this.dtgAgregarProducto.DataSource = null;
+            this.dtgAgregarProducto.DataSource = Comercio.Productos;
 
 
         }
@@ -81,21 +83,23 @@ namespace ParcialLabII
 
         }
 
-     
-
         private void deslogueo()
         {
             if (conteo == 400)
             {
-
-
                 this.Close();
-
-               
-
-
             }
 
+        }
+
+        private void dtgAgregarProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+             this.txtCodigo.Text = dtgAgregarProducto.CurrentRow.Cells[0].Value.ToString();
+             this.txtCodigo.Enabled = false;
+             this.txtNombre.Text = dtgAgregarProducto.CurrentRow.Cells[1].Value.ToString();
+             this.txtNombre.Enabled = false;
+             this.txtPrecio.Text = dtgAgregarProducto.CurrentRow.Cells[2].Value.ToString();
+             this.txtPrecio.Enabled = false;
         }
     }
 }

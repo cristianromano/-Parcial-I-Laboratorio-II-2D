@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormularioAgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioAgregarEmpleado.Designer.cs">
+      <DependentUpon>FormularioAgregarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioHistorialVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormularioAgregarEmpleado.resx">
+      <DependentUpon>FormularioAgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioHistorialVentas.resx">
       <DependentUpon>FormularioHistorialVentas.cs</DependentUpon>
     </EmbeddedResource>

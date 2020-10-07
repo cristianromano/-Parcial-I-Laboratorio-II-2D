@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Producto
+    public sealed class Producto
     {
         string codigo;
         string nombre;
         float precio;
         int stock;
-      //  Producto[] productos;
     
-
         public Producto(string codigo, string nombre, float precio, int stock)
         {
             this.Codigo = codigo;
@@ -28,9 +27,52 @@ namespace Entidades
         public float Precio { get => precio; set => precio = value; }
         public int Stock { get => stock; set => stock = value; }
 
-        public static explicit operator Producto(string v)
+        public static bool operator ==(List <Producto> productos , Producto producto)
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+
+            foreach (Producto item in productos)
+            {
+                if(item.codigo == producto.codigo)
+                {
+                    retorno =  true;
+                    break;
+                    
+                }
+            }
+
+            return retorno;
         }
+
+        public static bool operator !=(List<Producto> productos, Producto producto)
+        {
+            return !(productos == producto);
+        }
+
+        public static bool operator +(List<Producto> productos, Producto producto)
+        {
+            bool retorno = false;
+
+            if(productos != producto)
+            {
+                productos.Add(producto);
+
+                retorno = true;
+               
+            }
+
+            else
+            {
+                foreach (Producto item in productos)
+                {
+                    if(item.codigo == producto.codigo)
+                    {
+                        item.stock += producto.Stock;
+                    }
+                }              
+            }
+            return retorno;
+        }
+
     }
 }

@@ -16,7 +16,7 @@ namespace ParcialLabII
     public partial class FormularioVentas : Form
     {
 
-     
+
         int conteo;
         private Venta MiVenta;
         private Cliente MiCliente;
@@ -26,16 +26,11 @@ namespace ParcialLabII
         SoundPlayer zulma;
 
         List<Producto> ListaProductos;
-       
-
 
         public float acumulador = 0;
 
-
-
         public FormularioVentas()
         {
-
             InitializeComponent();
 
             ListaProductos = new List<Producto>();
@@ -44,8 +39,6 @@ namespace ParcialLabII
         public Venta MiVenta1 { get => MiVenta; set => MiVenta = value; }
         public List<Producto> ListaProducto { get => ListaProducto; set => ListaProducto = value; }
         public Cliente MiCliente1 { get => MiCliente; set => MiCliente = value; }
-
-
 
         private void FormularioVentas_Load(object sender, EventArgs e)
         {
@@ -68,18 +61,12 @@ namespace ParcialLabII
 
             transparenteLabels();
 
-           
             sonidoPeep = new SoundPlayer();
             sonidoCaja = new SoundPlayer();
             zulma = new SoundPlayer();
             apu = new SoundPlayer();
-            
-          
-
 
         }
-
-
 
         private void transparenteLabels()
         {
@@ -139,7 +126,6 @@ namespace ParcialLabII
 
             MiVenta = new Venta(this.txtNombreVendedor.Text, txtApellidoVendedor.Text, id, ListaProductos);
 
-
             this.dtgVentas.DataSource = null;
 
             this.btnAgregarProducto.Enabled = false;
@@ -153,42 +139,26 @@ namespace ParcialLabII
 
 
                 MiCliente = new Cliente(this.txtNombreVentas.Text, this.txtApellidoVentas.Text);
+
+                MessageBox.Show(MiCliente.registro());
             }
-
-
-
-            // MessageBox.Show("Graciass Vuelvass Prontoss", "Agradecimiento");
-
-
 
         }
 
-
         private void cmbProductosVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             Producto MiProducto = (Producto)this.cmbProductosVenta.SelectedItem;
-
 
             this.txtStock.Text = MiProducto.Stock.ToString();
 
             this.txtPrecioItem.Text = MiProducto.Precio.ToString();
 
-          
-
-
-
-
-
         }
-
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
 
             tmrFormVenta.Stop();
-
-           
 
             Producto MiProducto = (Producto)this.cmbProductosVenta.SelectedItem;
 
@@ -201,8 +171,6 @@ namespace ParcialLabII
             else
             {
 
-
-
                 sonidoPeep.Stream = Properties.Resources.beep;
                 sonidoPeep.Play();
 
@@ -213,39 +181,15 @@ namespace ParcialLabII
 
                 ListaProductos.Add(MiProducto);
 
+                acumulador += MiProducto.Precio;
 
-             /*   if (this.txtApellidoVentas.Text.Equals("Simpson"))
-                {
-                    acumulador += MiProducto.Precio;
-
-                   // descuento = (acumulador * 0.13f);
-
-
-                  //  this.txtPrecioTotal.Text = descuento.ToString();
-                }*/
-           
-                    acumulador += MiProducto.Precio;
-
-                    this.txtPrecioTotal.Text = acumulador.ToString();
-                
-
-
-
+                this.txtPrecioTotal.Text = acumulador.ToString();
 
                 RefrescarDataGridVenta();
 
                 dtgVentas.Columns.Remove("Stock");
 
-
-
-                // MessageBox.Show(array[i]);
-
-
-
             }
-
-
-
 
         }
 
@@ -267,20 +211,19 @@ namespace ParcialLabII
             this.txtApellidoVentas.Enabled = false;
             this.txtIDCliente.Text = dtgClientes.CurrentRow.Cells[0].Value.ToString();
             this.txtIDCliente.Enabled = false;
-
-
         }
 
         private void dtgEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.txtNombreVendedor.Text = dtgEmpleado.CurrentRow.Cells[0].Value.ToString();
+            this.txtNombreVendedor.Text = dtgEmpleado.CurrentRow.Cells[2].Value.ToString();
             this.txtNombreVendedor.Enabled = false;
-            this.txtApellidoVendedor.Text = dtgEmpleado.CurrentRow.Cells[1].Value.ToString();
+            this.txtApellidoVendedor.Text = dtgEmpleado.CurrentRow.Cells[3].Value.ToString();
             this.txtApellidoVendedor.Enabled = false;
-            this.txtIDVendedor.Text = dtgEmpleado.CurrentRow.Cells[2].Value.ToString();
+            this.txtIDVendedor.Text = dtgEmpleado.CurrentRow.Cells[0].Value.ToString();
             this.txtIDVendedor.Enabled = false;
+            this.txtTurno.Text = dtgEmpleado.CurrentRow.Cells[1].Value.ToString();
+            this.txtTurno.Enabled = false;
         }
-
 
         private bool ClienteYaExistente()
         {
@@ -306,7 +249,7 @@ namespace ParcialLabII
         private void FormularioVentas_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            if(MiVenta != null)
+            if (MiVenta != null)
             {
                 this.DialogResult = DialogResult.OK;
                 apu.Stream = Properties.Resources.apu;
@@ -318,10 +261,8 @@ namespace ParcialLabII
                 zulma.Stream = Properties.Resources.zulma;
                 zulma.Play();
             }
-            
+
         }
-
-
 
         private void tmrFormVenta_Tick(object sender, EventArgs e)
         {
@@ -333,12 +274,7 @@ namespace ParcialLabII
         {
             if (conteo == 600)
             {
-
-
-
                 this.Close();
-
-
             }
 
         }
@@ -351,8 +287,8 @@ namespace ParcialLabII
 
             // SE CREA EN C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\bin\Debug;
 
-            StreamWriter sw = new StreamWriter(string.Concat(directorio , "/tickets.txt"),false);
-           
+            StreamWriter sw = new StreamWriter(string.Concat(directorio, "/tickets.txt"), false);
+
             sw.WriteLine($"------------------------------");
             sw.WriteLine("TICKET DE COMPRA KWIK E MART");
             sw.WriteLine($"------------------------------");
@@ -377,30 +313,24 @@ namespace ParcialLabII
                 acumulador += item.Precio;
             }
 
-           
-                if (this.txtApellidoVentas.Text.Equals("Simpson"))
-                {
-                    descuento = (acumulador * 13) / 100;
+            if (this.txtApellidoVentas.Text.Equals("Simpson"))
+            {
+                descuento = (acumulador * 13) / 100;
 
-                    acumulador -= descuento;
+                acumulador -= descuento;
 
-                    sw.WriteLine($"DESCUENTO DEL %13 POR SER SIMPSON ");
-                    sw.WriteLine($"------------------------------");
-                    
-                }
-
-            
-                sw.WriteLine($"Precio Final: {acumulador}");
+                sw.WriteLine($"DESCUENTO DEL %13 POR SER SIMPSON ");
                 sw.WriteLine($"------------------------------");
-                sw.WriteLine($"GRACIAS POR TU COMPRA REY");
-                sw.Close();
 
-                MessageBox.Show("TICKET GENERADO CON EXITO!", "TICKET X TU COMPRA <3");         
+            }
 
+            sw.WriteLine($"Precio Final: {acumulador}");
+            sw.WriteLine($"------------------------------");
+            sw.WriteLine($"GRACIAS POR TU COMPRA REY");
+            sw.Close();
+
+            MessageBox.Show("TICKET GENERADO CON EXITO!", "TICKET X TU COMPRA <3");
         }
-
-
-
 
     }
 }

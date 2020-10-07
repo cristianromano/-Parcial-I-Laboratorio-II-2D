@@ -6,22 +6,29 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Empleado
+
+    public enum ETurno { Dia, Tarde, Noche }
+    public class Empleado : Persona
     {
+        
 
-        string nombre;
-        string apellido;
         int id;
+        ETurno turno;
+       static int acumID = 354;
 
-        public Empleado(string nombre, string apellido, int id)
+        public Empleado(string nombre, string apellido, ETurno turno) : base(nombre, apellido)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.id = id;
+            this.id = acumID++;
+            this.turno = turno;
         }
 
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apellido { get => apellido; set => apellido = value; }
         public int Id { get => id; set => id = value; }
+        public ETurno Turno { get => turno; }
+
+        public override string registro()
+        {
+            return $"Se ha registrado a Empleado ID: {this.id} , Nombre: {this.nombre}";
+        }
+
     }
 }

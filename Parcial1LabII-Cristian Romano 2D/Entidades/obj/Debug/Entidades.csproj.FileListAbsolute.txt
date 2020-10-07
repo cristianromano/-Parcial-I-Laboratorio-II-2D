@@ -15,3 +15,9 @@ C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Parci
 C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Parcial1Lab\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Parcial1Lab\obj\Debug\Entidades.dll
 C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Parcial1Lab\obj\Debug\Entidades.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Entidades\bin\Debug\Entidades.dll
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Entidades\obj\Debug\Entidades.dll
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Entidades\obj\Debug\Entidades.pdb

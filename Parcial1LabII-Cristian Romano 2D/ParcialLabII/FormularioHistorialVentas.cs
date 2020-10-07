@@ -21,7 +21,6 @@ namespace ParcialLabII
 
         private void FormularioHistorialVentas_Load(object sender, EventArgs e)
         {
-
             tmrFormHistorial.Start();
 
             conteo = 0;
@@ -31,26 +30,19 @@ namespace ParcialLabII
             this.dtgHistorialVentas.DataSource = null;
 
             this.dtgHistorialVentas.DataSource = Comercio.Ventas;
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             conteo++;
             deslogueo();
-
         }
 
         private void deslogueo()
         {
             if (conteo == 225)
             {
-
-                
-
                 this.Close();
-
-
             }
 
         }

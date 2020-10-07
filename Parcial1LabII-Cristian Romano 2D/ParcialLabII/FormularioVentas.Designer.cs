@@ -62,6 +62,7 @@
             this.btnTicket = new System.Windows.Forms.Button();
             this.txtPrecioItem = new System.Windows.Forms.TextBox();
             this.lbPrecioItem = new System.Windows.Forms.Label();
+            this.txtTurno = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleado)).BeginInit();
@@ -389,6 +390,13 @@
             this.lbPrecioItem.TabIndex = 30;
             this.lbPrecioItem.Text = "Precio";
             // 
+            // txtTurno
+            // 
+            this.txtTurno.Location = new System.Drawing.Point(604, 521);
+            this.txtTurno.Name = "txtTurno";
+            this.txtTurno.Size = new System.Drawing.Size(48, 20);
+            this.txtTurno.TabIndex = 31;
+            // 
             // FormularioVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +404,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(779, 645);
+            this.Controls.Add(this.txtTurno);
             this.Controls.Add(this.lbPrecioItem);
             this.Controls.Add(this.txtPrecioItem);
             this.Controls.Add(this.btnTicket);
@@ -476,5 +485,6 @@
         private System.Windows.Forms.Button btnTicket;
         private System.Windows.Forms.TextBox txtPrecioItem;
         private System.Windows.Forms.Label lbPrecioItem;
+        private System.Windows.Forms.TextBox txtTurno;
     }
 }

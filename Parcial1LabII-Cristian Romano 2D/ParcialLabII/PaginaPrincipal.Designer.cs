@@ -39,6 +39,7 @@
             this.picbLogo = new System.Windows.Forms.PictureBox();
             this.lbIventanrio = new System.Windows.Forms.Label();
             this.tmrLogeo = new System.Windows.Forms.Timer(this.components);
+            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbLogo)).BeginInit();
             this.SuspendLayout();
@@ -139,11 +140,22 @@
             this.tmrLogeo.Enabled = true;
             this.tmrLogeo.Tick += new System.EventHandler(this.tmrLogeo_Tick);
             // 
+            // btnAgregarEmpleado
+            // 
+            this.btnAgregarEmpleado.Location = new System.Drawing.Point(332, 397);
+            this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
+            this.btnAgregarEmpleado.Size = new System.Drawing.Size(121, 23);
+            this.btnAgregarEmpleado.TabIndex = 8;
+            this.btnAgregarEmpleado.Text = "Agregar Empleado";
+            this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
+            // 
             // PaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.btnAgregarEmpleado);
             this.Controls.Add(this.lbIventanrio);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBajoStock);
@@ -180,6 +192,7 @@
         private System.Windows.Forms.PictureBox picbLogo;
         private System.Windows.Forms.Label lbIventanrio;
         private System.Windows.Forms.Timer tmrLogeo;
+        private System.Windows.Forms.Button btnAgregarEmpleado;
     }
 }
 

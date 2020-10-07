@@ -41,7 +41,9 @@
             this.btnCrearProducto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmrAgregarProducto = new System.Windows.Forms.Timer(this.components);
+            this.dtgAgregarProducto = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAgregarProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // lbNombre
@@ -128,7 +130,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(650, 254);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -139,11 +141,32 @@
             this.tmrAgregarProducto.Interval = 120;
             this.tmrAgregarProducto.Tick += new System.EventHandler(this.tmrAgregarProducto_Tick);
             // 
+            // dtgAgregarProducto
+            // 
+            this.dtgAgregarProducto.AllowUserToAddRows = false;
+            this.dtgAgregarProducto.AllowUserToDeleteRows = false;
+            this.dtgAgregarProducto.AllowUserToResizeColumns = false;
+            this.dtgAgregarProducto.AllowUserToResizeRows = false;
+            this.dtgAgregarProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgAgregarProducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgAgregarProducto.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgAgregarProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dtgAgregarProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtgAgregarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgAgregarProducto.Location = new System.Drawing.Point(237, 28);
+            this.dtgAgregarProducto.Name = "dtgAgregarProducto";
+            this.dtgAgregarProducto.ReadOnly = true;
+            this.dtgAgregarProducto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dtgAgregarProducto.Size = new System.Drawing.Size(383, 150);
+            this.dtgAgregarProducto.TabIndex = 10;
+            this.dtgAgregarProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAgregarProducto_CellContentClick);
+            // 
             // NuevosProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(244, 240);
+            this.ClientSize = new System.Drawing.Size(650, 254);
+            this.Controls.Add(this.dtgAgregarProducto);
             this.Controls.Add(this.btnCrearProducto);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtPrecio);
@@ -162,6 +185,7 @@
             this.Text = "Agregar Producto";
             this.Load += new System.EventHandler(this.NuevosProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAgregarProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +204,6 @@
         private System.Windows.Forms.Button btnCrearProducto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer tmrAgregarProducto;
+        private System.Windows.Forms.DataGridView dtgAgregarProducto;
     }
 }

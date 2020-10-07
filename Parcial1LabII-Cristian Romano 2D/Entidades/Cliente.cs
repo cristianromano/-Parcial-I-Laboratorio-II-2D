@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public sealed class Cliente:Persona
+    public  class Cliente:Persona
     {
 
         int idCliente;
@@ -19,6 +19,10 @@ namespace Entidades
 
         public int IdCliente { get => idCliente; set => idCliente = value; }
 
+        public override string registro()
+        {
+           return $"Se cargo a Cliente: {this.nombre} , ID: {this.IdCliente}";
+        }
 
     }
 }

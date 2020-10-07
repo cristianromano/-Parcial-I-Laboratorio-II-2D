@@ -1,7 +1,7 @@
 ------------------------------
 TICKET DE COMPRA KWIK E MART
 ------------------------------
-Hora: 05/10/2020 22:03:40
+Hora: 06/10/2020 19:18:36
 ------------------------------
 Empleado: Lebron,James 
 ------------------------------
@@ -20,26 +20,24 @@ Item: Oreo x Precio: 30,25
 ------------------------------
 Item: Oreo x Precio: 30,25
 ------------------------------
-Item: Merengadas x Precio: 30,33
+Item: Oreo x Precio: 30,25
 ------------------------------
-Item: Merengadas x Precio: 30,33
+Item: Chocolinas x Precio: 69,99
 ------------------------------
-Item: Merengadas x Precio: 30,33
+Item: Chocolinas x Precio: 69,99
 ------------------------------
-Item: Mellizas x Precio: 74,35
+Item: Chocolinas x Precio: 69,99
 ------------------------------
-Item: Mellizas x Precio: 74,35
+Item: Chocolinas x Precio: 69,99
 ------------------------------
-Item: Mellizas x Precio: 74,35
+Item: Oreo x Precio: 30,25
 ------------------------------
-Item: Mellizas x Precio: 74,35
+Item: Oreo x Precio: 30,25
 ------------------------------
-Item: Saladix x Precio: 30,8
+Item: Oreo x Precio: 30,25
 ------------------------------
-Item: Saladix x Precio: 30,8
+DESCUENTO DEL %13 POR SER SIMPSON 
 ------------------------------
-Item: Saladix x Precio: 30,8
-------------------------------
-Precio Final: 601,79
+Precio Final: 454,1052
 ------------------------------
 GRACIAS POR TU COMPRA REY

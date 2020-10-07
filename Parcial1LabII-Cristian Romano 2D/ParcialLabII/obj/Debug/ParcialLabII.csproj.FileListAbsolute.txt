@@ -49,3 +49,4 @@ C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\Parci
 C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.csproj.CopyComplete
 C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.exe
 C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.pdb
+C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1LabII-Cristian Romano 2D\ParcialLabII\obj\Debug\ParcialLabII.FormularioAgregarEmpleado.resources
