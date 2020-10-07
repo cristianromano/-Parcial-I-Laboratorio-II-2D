@@ -73,6 +73,16 @@ namespace ParcialLabII
 
             MiProducto = new Producto(this.txtCodigo.Text, this.txtNombre.Text, precio, stock);
 
+            if (Comercio.Productos + MiProducto)
+            {
+                MessageBox.Show("Agregado con exito");
+            }
+
+            else
+            {
+                MessageBox.Show($"Se ha agregado Stock a Producto: {MiProducto.Nombre}");
+            }
+
             this.DialogResult = DialogResult.OK;
         }
 

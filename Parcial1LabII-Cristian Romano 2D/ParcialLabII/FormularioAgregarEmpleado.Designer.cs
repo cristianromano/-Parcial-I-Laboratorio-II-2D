@@ -37,6 +37,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cmbTurno = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbDNI = new System.Windows.Forms.Label();
+            this.txtDNI = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             // 
             this.lbNombre.AutoSize = true;
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombre.Location = new System.Drawing.Point(14, 80);
+            this.lbNombre.Location = new System.Drawing.Point(14, 54);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(71, 20);
             this.lbNombre.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             this.lbApellido.AutoSize = true;
             this.lbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApellido.Location = new System.Drawing.Point(12, 132);
+            this.lbApellido.Location = new System.Drawing.Point(12, 91);
             this.lbApellido.Name = "lbApellido";
             this.lbApellido.Size = new System.Drawing.Size(73, 20);
             this.lbApellido.TabIndex = 2;
@@ -74,7 +76,7 @@
             // 
             this.lbTurno.AutoSize = true;
             this.lbTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTurno.Location = new System.Drawing.Point(14, 175);
+            this.lbTurno.Location = new System.Drawing.Point(28, 173);
             this.lbTurno.Name = "lbTurno";
             this.lbTurno.Size = new System.Drawing.Size(55, 20);
             this.lbTurno.TabIndex = 3;
@@ -82,14 +84,14 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(102, 132);
+            this.txtApellido.Location = new System.Drawing.Point(102, 91);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 6;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(102, 80);
+            this.txtNombre.Location = new System.Drawing.Point(102, 56);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 7;
@@ -98,7 +100,7 @@
             // 
             this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTurno.FormattingEnabled = true;
-            this.cmbTurno.Location = new System.Drawing.Point(102, 175);
+            this.cmbTurno.Location = new System.Drawing.Point(102, 172);
             this.cmbTurno.Name = "cmbTurno";
             this.cmbTurno.Size = new System.Drawing.Size(100, 21);
             this.cmbTurno.TabIndex = 8;
@@ -114,11 +116,30 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // lbDNI
+            // 
+            this.lbDNI.AutoSize = true;
+            this.lbDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDNI.Location = new System.Drawing.Point(43, 132);
+            this.lbDNI.Name = "lbDNI";
+            this.lbDNI.Size = new System.Drawing.Size(40, 20);
+            this.lbDNI.TabIndex = 10;
+            this.lbDNI.Text = "DNI";
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.Location = new System.Drawing.Point(102, 132);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(100, 20);
+            this.txtDNI.TabIndex = 11;
+            // 
             // FormularioAgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(267, 276);
+            this.Controls.Add(this.txtDNI);
+            this.Controls.Add(this.lbDNI);
             this.Controls.Add(this.cmbTurno);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtApellido);
@@ -150,5 +171,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cmbTurno;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbDNI;
+        private System.Windows.Forms.TextBox txtDNI;
     }
 }

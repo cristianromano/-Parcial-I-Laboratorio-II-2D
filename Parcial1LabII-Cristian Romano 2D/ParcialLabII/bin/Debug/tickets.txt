@@ -1,11 +1,11 @@
 ------------------------------
 TICKET DE COMPRA KWIK E MART
 ------------------------------
-Hora: 06/10/2020 19:18:36
+Hora: 07/10/2020 2:58:44
 ------------------------------
-Empleado: Lebron,James 
+Empleado: Kobe,Bryant 
 ------------------------------
-ID: 239
+ID: 354
 ------------------------------
  
  
@@ -18,26 +18,6 @@ Item: Oreo x Precio: 30,25
 ------------------------------
 Item: Oreo x Precio: 30,25
 ------------------------------
-Item: Oreo x Precio: 30,25
-------------------------------
-Item: Oreo x Precio: 30,25
-------------------------------
-Item: Chocolinas x Precio: 69,99
-------------------------------
-Item: Chocolinas x Precio: 69,99
-------------------------------
-Item: Chocolinas x Precio: 69,99
-------------------------------
-Item: Chocolinas x Precio: 69,99
-------------------------------
-Item: Oreo x Precio: 30,25
-------------------------------
-Item: Oreo x Precio: 30,25
-------------------------------
-Item: Oreo x Precio: 30,25
-------------------------------
-DESCUENTO DEL %13 POR SER SIMPSON 
-------------------------------
-Precio Final: 454,1052
+Precio Final: 90,75
 ------------------------------
 GRACIAS POR TU COMPRA REY

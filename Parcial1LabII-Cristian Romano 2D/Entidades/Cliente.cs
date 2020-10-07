@@ -21,8 +21,40 @@ namespace Entidades
 
         public override string registro()
         {
-           return $"Se cargo a Cliente: {this.nombre} , ID: {this.IdCliente}";
+           return $"Se cargo a Cliente: {this.nombre} {this.apellido} , ID: {this.IdCliente}";
         }
+
+        public static bool operator ==(List<Cliente>clientes , Cliente cliente)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if(item.nombre == cliente.nombre && item.apellido == cliente.apellido)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool operator !=(List<Cliente> clientes, Cliente cliente)
+        {
+            return !(clientes == cliente);
+        }
+
+        public static bool operator +(List<Cliente> clientes, Cliente cliente)
+        {
+            if(clientes != cliente)
+            {
+                clientes.Add(cliente);
+                return true;
+            }
+
+            return false;
+        }
+
+
+
 
     }
 }

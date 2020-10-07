@@ -29,21 +29,32 @@ namespace ParcialLabII
 
             this.lbTurno.Parent = pictureBox1;
             this.lbTurno.BackColor = Color.Transparent;
+
+            this.lbDNI.Parent = pictureBox1;
+            this.lbDNI.BackColor = Color.Transparent;
         }
 
         private void FormularioAgregarEmpleado_Load(object sender, EventArgs e)
         {
             this.cmbTurno.DataSource = Enum.GetValues(typeof(ETurno));
-            
+
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.cmbTurno.SelectedItem);
+            MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.cmbTurno.SelectedItem , double.Parse(this.txtDNI.Text));
 
-            MessageBox.Show(MiEmpleado.registro());
+            if (Comercio.Empleados + MiEmpleado)
+            {
+                MessageBox.Show(MiEmpleado.registro());
+                MessageBox.Show("Empleado agregado con exito", "MENSAJE DE REGISTRO");
+                this.DialogResult = DialogResult.OK;
+            }
 
-            this.DialogResult = DialogResult.OK;
+            else
+            {
+                MessageBox.Show("El DNI ingresado ya pertenece a un Empleado", "Warning");
+            }          
 
         }
     }

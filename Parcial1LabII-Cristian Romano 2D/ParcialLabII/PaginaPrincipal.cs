@@ -44,11 +44,6 @@ namespace ParcialLabII
 
             if (OpcionProductos.ShowDialog() == DialogResult.OK)
             {
-                if( Comercio.AgregarProducto(OpcionProductos.Producto) )
-                {
-                    MessageBox.Show("Agregado con exito");
-                }
-
                 RefrescarDataGrid();
             }
 
@@ -72,15 +67,7 @@ namespace ParcialLabII
 
             if (formularioVentas.ShowDialog() == DialogResult.OK)
             {
-                Comercio.AgregarVenta(formularioVentas.MiVenta1);
-
                 btnHistorialVentas.Enabled = true;
-
-                if (formularioVentas.MiCliente1 != null)
-                {
-                    Comercio.AgregarCliente(formularioVentas.MiCliente1);
-                    
-                }
 
                 RefrescarDataGrid();
             }
@@ -96,7 +83,6 @@ namespace ParcialLabII
             FormularioHistorialVentas formHistorialVentas = new FormularioHistorialVentas();
             if (formHistorialVentas.ShowDialog() == DialogResult.OK)
             {
-
                 RefrescarDataGrid();
             }
             tmrLogeo.Start();
@@ -114,8 +100,6 @@ namespace ParcialLabII
                 if (item.Stock < 10)
                 {
                     aux.Add(item);
-
-
                 }
             }
 
@@ -162,8 +146,6 @@ namespace ParcialLabII
 
             if (agregarEmpleado.ShowDialog() == DialogResult.OK)
             {
-                Comercio.AgregarEmpleado(agregarEmpleado.MiEmpleado1);
-
                 RefrescarDataGrid();
             }
         }

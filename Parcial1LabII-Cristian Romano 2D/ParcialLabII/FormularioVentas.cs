@@ -15,8 +15,6 @@ namespace ParcialLabII
 {
     public partial class FormularioVentas : Form
     {
-
-
         int conteo;
         private Venta MiVenta;
         private Cliente MiCliente;
@@ -28,22 +26,16 @@ namespace ParcialLabII
         List<Producto> ListaProductos;
 
         public float acumulador = 0;
-
         public FormularioVentas()
         {
             InitializeComponent();
 
             ListaProductos = new List<Producto>();
         }
-
-        public Venta MiVenta1 { get => MiVenta; set => MiVenta = value; }
         public List<Producto> ListaProducto { get => ListaProducto; set => ListaProducto = value; }
-        public Cliente MiCliente1 { get => MiCliente; set => MiCliente = value; }
 
         private void FormularioVentas_Load(object sender, EventArgs e)
         {
-            // dtgVentas.Columns.RemoveAt(dtgVentas.Columns.Count - 1);
-
             tmrFormVenta.Start();
 
             conteo = 0;
@@ -65,7 +57,6 @@ namespace ParcialLabII
             sonidoCaja = new SoundPlayer();
             zulma = new SoundPlayer();
             apu = new SoundPlayer();
-
         }
 
         private void transparenteLabels()
@@ -126,21 +117,25 @@ namespace ParcialLabII
 
             MiVenta = new Venta(this.txtNombreVendedor.Text, txtApellidoVendedor.Text, id, ListaProductos);
 
+            if (Comercio.Ventas + MiVenta)
+            {
+                MessageBox.Show($"Venta exitosa!");
+            }
+
             this.dtgVentas.DataSource = null;
 
             this.btnAgregarProducto.Enabled = false;
 
             this.btnAceptarVentas.Enabled = false;
 
-            bool existe = ClienteYaExistente();
+            MiCliente = new Cliente(this.txtNombreVentas.Text, this.txtApellidoVentas.Text);
 
-            if (existe == false)
+            if (Comercio.Clientes + MiCliente)
             {
-
-
-                MiCliente = new Cliente(this.txtNombreVentas.Text, this.txtApellidoVentas.Text);
-
                 MessageBox.Show(MiCliente.registro());
+                this.dtgClientes.DataSource = Comercio.Clientes;
+                this.dtgClientes.DataSource = null;
+                this.dtgClientes.DataSource = Comercio.Clientes;
             }
 
         }
@@ -223,27 +218,6 @@ namespace ParcialLabII
             this.txtIDVendedor.Enabled = false;
             this.txtTurno.Text = dtgEmpleado.CurrentRow.Cells[1].Value.ToString();
             this.txtTurno.Enabled = false;
-        }
-
-        private bool ClienteYaExistente()
-        {
-            int idCliente;
-
-
-            if (int.TryParse(this.txtIDCliente.Text, out idCliente))
-            {
-                foreach (Cliente item in Comercio.Clientes)
-                {
-                    if (item.IdCliente == idCliente)
-                    {
-                        return true;
-                    }
-
-                }
-            }
-
-            return false;
-
         }
 
         private void FormularioVentas_FormClosing(object sender, FormClosingEventArgs e)

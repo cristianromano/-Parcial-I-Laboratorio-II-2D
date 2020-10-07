@@ -10,24 +10,57 @@ namespace Entidades
     public enum ETurno { Dia, Tarde, Noche }
     public class Empleado : Persona
     {
-        
+
 
         int id;
         ETurno turno;
-       static int acumID = 354;
+        static int acumID = 354;
+        double dni;
 
-        public Empleado(string nombre, string apellido, ETurno turno) : base(nombre, apellido)
+        public Empleado(string nombre, string apellido, ETurno turno , double dni) : base(nombre, apellido)
         {
             this.id = acumID++;
             this.turno = turno;
+            this.dni = dni;
         }
 
-        public int Id { get => id; set => id = value; }
+        public int ID { get => id; }
         public ETurno Turno { get => turno; }
-
+        private double Dni { get => dni; }
         public override string registro()
         {
-            return $"Se ha registrado a Empleado ID: {this.id} , Nombre: {this.nombre}";
+            return $"Se ha registrado a Empleado ID: {this.ID} , Nombre: {this.nombre}";
+        }
+
+        public static bool operator ==(List<Empleado> empleados, Empleado empleado)
+        {
+            foreach (Empleado item in empleados)
+            {
+                if (item.dni == empleado.dni)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool operator !=(List<Empleado> empleados, Empleado empleado)
+        {
+            return !(empleados == empleado);
+        }
+
+        public static bool operator +(List<Empleado> empleados, Empleado empleado)
+        {
+            bool retorno = false;
+
+            if (empleados != empleado)
+            {
+                empleados.Add(empleado);
+                retorno = true;
+            }
+
+            return retorno;
         }
 
     }
