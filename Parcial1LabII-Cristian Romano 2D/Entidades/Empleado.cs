@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-
     public enum ETurno { Dia, Tarde, Noche }
+
     public class Empleado : Persona
     {
+
         int id;
         ETurno turno;
         static int acumID = 354;

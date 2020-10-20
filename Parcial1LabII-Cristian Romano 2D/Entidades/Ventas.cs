@@ -19,8 +19,7 @@ namespace Entidades
             this.apellido = apellido;
             this.Id = id;
             this.Productos = productos;
-            productos = new List<Producto>();
-           
+            productos = new List<Producto>();          
         }
         public int Id { get => id; set => id = value; }
         public List<Producto> Productos { get => productos; set => productos = value; }
