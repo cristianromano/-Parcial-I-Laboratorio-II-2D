@@ -40,7 +40,7 @@
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.dtgEliminarAgregar = new System.Windows.Forms.DataGridView();
             this.lbRemover = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTurno = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEliminarAgregar)).BeginInit();
             this.SuspendLayout();
@@ -154,22 +154,22 @@
             this.lbRemover.UseVisualStyleBackColor = true;
             this.lbRemover.Click += new System.EventHandler(this.lbRemover_Click);
             // 
-            // comboBox1
+            // cmbTurno
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Location = new System.Drawing.Point(240, 241);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTurno.FormattingEnabled = true;
+            this.cmbTurno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cmbTurno.Location = new System.Drawing.Point(240, 241);
+            this.cmbTurno.Name = "cmbTurno";
+            this.cmbTurno.Size = new System.Drawing.Size(121, 21);
+            this.cmbTurno.TabIndex = 14;
             // 
             // FormularioAgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 367);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTurno);
             this.Controls.Add(this.lbRemover);
             this.Controls.Add(this.dtgEliminarAgregar);
             this.Controls.Add(this.txtDNI);
@@ -208,6 +208,6 @@
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.DataGridView dtgEliminarAgregar;
         private System.Windows.Forms.Button lbRemover;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTurno;
     }
 }

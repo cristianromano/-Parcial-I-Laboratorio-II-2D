@@ -22,7 +22,7 @@ namespace ParcialLabII
 
         private void FormularioAgregarEmpleado_Load(object sender, EventArgs e)
         {
-            this.comboBox1.DataSource = Enum.GetValues(typeof(ETurno));
+            this.cmbTurno.DataSource = Enum.GetValues(typeof(ETurno));
 
             this.dtgEliminarAgregar.DataSource = Comercio.Empleados;
             this.dtgEliminarAgregar.DataSource = null;
@@ -54,7 +54,7 @@ namespace ParcialLabII
             {
                 if (string.IsNullOrWhiteSpace(this.txtNombre.Text) == false && string.IsNullOrWhiteSpace(this.txtApellido.Text) == false && string.IsNullOrWhiteSpace(this.txtDNI.Text) == false)
                 {
-                    MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.comboBox1.SelectedItem, double.Parse(this.txtDNI.Text));
+                    MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.cmbTurno.SelectedItem, double.Parse(this.txtDNI.Text));
 
                     if (Comercio.Empleados + MiEmpleado)
                     {
@@ -98,8 +98,8 @@ namespace ParcialLabII
             this.txtApellido.Enabled = false;
             this.txtDNI.Text = dtgEliminarAgregar.CurrentRow.Cells[2].Value.ToString();
             this.txtDNI.Enabled = false;
-            this.comboBox1.Text = dtgEliminarAgregar.CurrentRow.Cells[1].Value.ToString();
-            this.comboBox1.Enabled = false;
+            this.cmbTurno.Text = dtgEliminarAgregar.CurrentRow.Cells[1].Value.ToString();
+            this.cmbTurno.Enabled = false;
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace ParcialLabII
         /// <param name="e"></param>
         private void lbRemover_Click(object sender, EventArgs e)
         {
-            MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.comboBox1.SelectedItem, double.Parse(this.txtDNI.Text));
+            MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.cmbTurno.SelectedItem, double.Parse(this.txtDNI.Text));
 
             if (Comercio.Empleados - MiEmpleado)
             {
