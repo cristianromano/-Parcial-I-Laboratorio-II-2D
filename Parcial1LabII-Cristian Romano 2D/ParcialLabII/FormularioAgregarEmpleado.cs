@@ -17,7 +17,7 @@ namespace ParcialLabII
         private Empleado MiEmpleado;
         public FormularioAgregarEmpleado()
         {
-            InitializeComponent();          
+            InitializeComponent();
         }
 
         private void FormularioAgregarEmpleado_Load(object sender, EventArgs e)
@@ -41,25 +41,57 @@ namespace ParcialLabII
             this.lbDNI.BackColor = Color.Transparent;
         }
 
+        /// <summary>
+        /// al ser seleccionado agrega un nuevo empleado a la lista
+        /// en caso de tener espacios sin datos arroja mi excepcion
+        /// en caso de tener un error de formato arroja excepcion heredada de libreria Exception
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.cmbTurno.SelectedItem, double.Parse(this.txtDNI.Text));
-
-            if (Comercio.Empleados + MiEmpleado)
+            try
             {
-                MessageBox.Show(MiEmpleado.registro());
-                this.DialogResult = DialogResult.OK;
+                if (string.IsNullOrWhiteSpace(this.txtNombre.Text) == false && string.IsNullOrWhiteSpace(this.txtApellido.Text) == false && string.IsNullOrWhiteSpace(this.txtDNI.Text) == false)
+                {
+                    MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.cmbTurno.SelectedItem, double.Parse(this.txtDNI.Text));
+
+                    if (Comercio.Empleados + MiEmpleado)
+                    {
+                        MessageBox.Show(MiEmpleado.registro());
+                        this.DialogResult = DialogResult.OK;
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("El DNI ingresado ya pertenece a un Empleado", "Warning");
+                    }
+                }
+                
+                else
+                {
+                    throw new Excepciones("no se pudo realizar ingreso de empleado , faltan datos");
+                }
+
+                
             }
 
-            else
+
+            catch (Excepciones miExcepcion)
             {
-                MessageBox.Show("El DNI ingresado ya pertenece a un Empleado", "Warning");
-            }          
+                MessageBox.Show(miExcepcion.Message);
+            }
+
+            catch(FormatException miExcepcion)
+            {
+                MessageBox.Show(miExcepcion.Message);
+            }
+
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {       
+        {
             this.txtNombre.Text = dtgEliminarAgregar.CurrentRow.Cells[3].Value.ToString();
             this.txtNombre.Enabled = false;
             this.txtApellido.Text = dtgEliminarAgregar.CurrentRow.Cells[4].Value.ToString();
@@ -70,17 +102,22 @@ namespace ParcialLabII
             this.cmbTurno.Enabled = false;
         }
 
+        /// <summary>
+        /// al ser seleccionado elimina un empleado de la lista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbRemover_Click(object sender, EventArgs e)
         {
             MiEmpleado = new Empleado(this.txtNombre.Text, this.txtApellido.Text, (ETurno)this.cmbTurno.SelectedItem, double.Parse(this.txtDNI.Text));
-         
-               if (Comercio.Empleados - MiEmpleado)
-               {
-                   MessageBox.Show("Empleado eliminado del sistema", "Mensaje");
-                   this.dtgEliminarAgregar.DataSource = Comercio.Empleados;
-                   this.dtgEliminarAgregar.DataSource = null;
-                   this.dtgEliminarAgregar.DataSource = Comercio.Empleados;
-               }
+
+            if (Comercio.Empleados - MiEmpleado)
+            {
+                MessageBox.Show("Empleado eliminado del sistema", "Mensaje");
+                this.dtgEliminarAgregar.DataSource = Comercio.Empleados;
+                this.dtgEliminarAgregar.DataSource = null;
+                this.dtgEliminarAgregar.DataSource = Comercio.Empleados;
+            }
 
             else
             {

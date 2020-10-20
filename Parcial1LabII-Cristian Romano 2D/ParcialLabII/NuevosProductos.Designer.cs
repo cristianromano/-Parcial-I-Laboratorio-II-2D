@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmrAgregarProducto = new System.Windows.Forms.Timer(this.components);
             this.dtgAgregarProducto = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAgregarProducto)).BeginInit();
             this.SuspendLayout();
@@ -118,9 +119,9 @@
             // 
             this.btnCrearProducto.Location = new System.Drawing.Point(81, 197);
             this.btnCrearProducto.Name = "btnCrearProducto";
-            this.btnCrearProducto.Size = new System.Drawing.Size(100, 23);
+            this.btnCrearProducto.Size = new System.Drawing.Size(61, 23);
             this.btnCrearProducto.TabIndex = 8;
-            this.btnCrearProducto.Text = "Agregar Producto";
+            this.btnCrearProducto.Text = "Agregar";
             this.btnCrearProducto.UseVisualStyleBackColor = true;
             this.btnCrearProducto.Click += new System.EventHandler(this.btnCrearProducto_Click);
             // 
@@ -130,7 +131,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(650, 254);
+            this.pictureBox1.Size = new System.Drawing.Size(616, 254);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -153,7 +154,7 @@
             this.dtgAgregarProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dtgAgregarProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtgAgregarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgAgregarProducto.Location = new System.Drawing.Point(237, 28);
+            this.dtgAgregarProducto.Location = new System.Drawing.Point(212, 21);
             this.dtgAgregarProducto.Name = "dtgAgregarProducto";
             this.dtgAgregarProducto.ReadOnly = true;
             this.dtgAgregarProducto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -161,11 +162,22 @@
             this.dtgAgregarProducto.TabIndex = 10;
             this.dtgAgregarProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAgregarProducto_CellContentClick);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(337, 197);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(125, 23);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NuevosProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 254);
+            this.ClientSize = new System.Drawing.Size(616, 254);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dtgAgregarProducto);
             this.Controls.Add(this.btnCrearProducto);
             this.Controls.Add(this.txtStock);
@@ -205,5 +217,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer tmrAgregarProducto;
         private System.Windows.Forms.DataGridView dtgAgregarProducto;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

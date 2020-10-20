@@ -10,8 +10,6 @@ namespace Entidades
     public enum ETurno { Dia, Tarde, Noche }
     public class Empleado : Persona
     {
-
-
         int id;
         ETurno turno;
         static int acumID = 354;
@@ -27,11 +25,23 @@ namespace Entidades
         public int ID { get => id; }
         public ETurno Turno { get => turno; }
         public double Dni { get => dni; }
+
+        /// <summary>
+        /// informa datos de registro de empleado al registrarse 
+        /// </summary>
+        /// <returns></returns>
         public override string registro()
         {
             return $"Se ha registrado a Empleado ID: {this.ID} , Nombre: {this.nombre}";
         }
 
+
+        /// <summary>
+        /// indica que si el dni de un empleado de la lista es igual al que se le pasa por parametro devuelva true;
+        /// </summary>
+        /// <param name="empleados"></param>
+        /// <param name="empleado"></param>
+        /// <returns>bool</returns>
         public static bool operator ==(List<Empleado> empleados, Empleado empleado)
         {
             foreach (Empleado item in empleados)
@@ -44,10 +54,22 @@ namespace Entidades
 
             return false;
         }
+        /// <summary>
+        /// indica que si el dni de un empleado de la lista es igual al que se le pasa por parametro devuelva false , niega el ==;
+        /// </summary>
+        /// <param name="empleados"></param>
+        /// <param name="empleado"></param>
+        /// <returns>bool</returns>
         public static bool operator !=(List<Empleado> empleados, Empleado empleado)
         {
             return !(empleados == empleado);
         }
+        /// <summary>
+        /// agrega un elemento a la lista en caso de no encontrarse en la misma
+        /// </summary>
+        /// <param name="empleados"></param>
+        /// <param name="empleado"></param>
+        /// <returns>bool</returns>
         public static bool operator +(List<Empleado> empleados, Empleado empleado)
         {
             bool retorno = false;
@@ -59,8 +81,13 @@ namespace Entidades
             }
 
             return retorno;
-        }     
-        
+        }           
+        /// <summary>
+        /// elimia un empleado de la lista en caso de encontrarse en la misma
+        /// </summary>
+        /// <param name="empleados"></param>
+        /// <param name="empleado"></param>
+        /// <returns>bool</returns>
         public static bool operator -(List<Empleado> empleados, Empleado empleado)
         {
             bool retorno = false;

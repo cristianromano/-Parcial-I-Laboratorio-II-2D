@@ -65,19 +65,19 @@
             // 
             // btnNuevosProductos
             // 
-            this.btnNuevosProductos.Location = new System.Drawing.Point(167, 362);
+            this.btnNuevosProductos.Location = new System.Drawing.Point(329, 361);
             this.btnNuevosProductos.Name = "btnNuevosProductos";
-            this.btnNuevosProductos.Size = new System.Drawing.Size(121, 22);
+            this.btnNuevosProductos.Size = new System.Drawing.Size(156, 25);
             this.btnNuevosProductos.TabIndex = 1;
-            this.btnNuevosProductos.Text = "Ingresar Productos";
+            this.btnNuevosProductos.Text = "Ingresar/Eliminar Productos";
             this.btnNuevosProductos.UseVisualStyleBackColor = true;
             this.btnNuevosProductos.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // btnVentas
             // 
-            this.btnVentas.Location = new System.Drawing.Point(332, 361);
+            this.btnVentas.Location = new System.Drawing.Point(167, 392);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(121, 22);
+            this.btnVentas.Size = new System.Drawing.Size(155, 25);
             this.btnVentas.TabIndex = 2;
             this.btnVentas.Text = "Realizar Venta";
             this.btnVentas.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             // 
             // btnHistorialVentas
             // 
-            this.btnHistorialVentas.Location = new System.Drawing.Point(488, 361);
+            this.btnHistorialVentas.Location = new System.Drawing.Point(329, 392);
             this.btnHistorialVentas.Name = "btnHistorialVentas";
-            this.btnHistorialVentas.Size = new System.Drawing.Size(121, 23);
+            this.btnHistorialVentas.Size = new System.Drawing.Size(156, 25);
             this.btnHistorialVentas.TabIndex = 3;
             this.btnHistorialVentas.Text = "Historial Ventas";
             this.btnHistorialVentas.UseVisualStyleBackColor = true;
@@ -95,9 +95,9 @@
             // 
             // btnBajoStock
             // 
-            this.btnBajoStock.Location = new System.Drawing.Point(488, 398);
+            this.btnBajoStock.Location = new System.Drawing.Point(491, 392);
             this.btnBajoStock.Name = "btnBajoStock";
-            this.btnBajoStock.Size = new System.Drawing.Size(121, 23);
+            this.btnBajoStock.Size = new System.Drawing.Size(118, 25);
             this.btnBajoStock.TabIndex = 4;
             this.btnBajoStock.Text = "Bajo Stock";
             this.btnBajoStock.UseVisualStyleBackColor = true;
@@ -105,9 +105,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(167, 398);
+            this.btnRefresh.Location = new System.Drawing.Point(491, 361);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(121, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(118, 25);
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.Text = "Refrescar DataGrid";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             // 
             // btnAgregarEmpleado
             // 
-            this.btnAgregarEmpleado.Location = new System.Drawing.Point(332, 397);
+            this.btnAgregarEmpleado.Location = new System.Drawing.Point(167, 361);
             this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
-            this.btnAgregarEmpleado.Size = new System.Drawing.Size(121, 40);
+            this.btnAgregarEmpleado.Size = new System.Drawing.Size(155, 25);
             this.btnAgregarEmpleado.TabIndex = 8;
             this.btnAgregarEmpleado.Text = "Agregar/Eliminar Empleado";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;

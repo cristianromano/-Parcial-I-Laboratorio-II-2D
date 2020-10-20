@@ -9,7 +9,7 @@ namespace Entidades
 {
     public abstract class Persona
     {
-       protected string nombre; // solo es publico para las clases que heredan de Persona;
+       protected string nombre; 
        protected string apellido;
 
         protected Persona(string nombre, string apellido)

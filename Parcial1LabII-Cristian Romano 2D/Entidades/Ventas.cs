@@ -26,6 +26,13 @@ namespace Entidades
         public List<Producto> Productos { get => productos; set => productos = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
+
+        /// <summary>
+        /// agrega una nueva venta a la lista
+        /// </summary>
+        /// <param name="ventas"></param>
+        /// <param name="venta"></param>
+        /// <returns>bool</returns>
         public static bool operator +(List<Venta> ventas , Venta venta)
         {
             ventas.Add(venta);

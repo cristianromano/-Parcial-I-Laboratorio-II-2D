@@ -44,6 +44,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Comercio.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="Excepciones.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

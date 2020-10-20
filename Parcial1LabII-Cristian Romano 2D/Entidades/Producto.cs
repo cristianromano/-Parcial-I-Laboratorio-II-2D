@@ -27,6 +27,12 @@ namespace Entidades
         public float Precio { get => precio; set => precio = value; }
         public int Stock { get => stock; set => stock = value; }
 
+        /// <summary>
+        /// funcion utilizada para verificar si el objeto pasado por parametro ya tiene el mismo codigo que alguno perteneciente a la lista , de ser asi devuelve un true
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <param name="producto"></param>
+        /// <returns>bool</returns>
         public static bool operator ==(List <Producto> productos , Producto producto)
         {
             bool retorno = false;
@@ -44,11 +50,23 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// niega el metodo ==
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <param name="producto"></param>
+        /// <returns>bool</returns>
         public static bool operator !=(List<Producto> productos, Producto producto)
         {
             return !(productos == producto);
         }
 
+        /// <summary>
+        /// agrega un nuevo producto a la lista
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <param name="producto"></param>
+        /// <returns>bool</returns>
         public static bool operator +(List<Producto> productos, Producto producto)
         {
             bool retorno = false;
@@ -71,6 +89,29 @@ namespace Entidades
                     }
                 }              
             }
+            return retorno;
+        }
+
+        /// <summary>
+        /// elimina un producto de la lista
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <param name="producto"></param>
+        /// <returns></returns>
+        public static bool operator -(List<Producto> productos, Producto producto)
+        {
+            bool retorno = false;
+
+            foreach (Producto item in productos)
+            {
+                if (item.codigo == producto.codigo)
+                {
+                    productos.Remove(item);
+                    retorno = true;
+                    break;
+                }
+            }
+
             return retorno;
         }
 

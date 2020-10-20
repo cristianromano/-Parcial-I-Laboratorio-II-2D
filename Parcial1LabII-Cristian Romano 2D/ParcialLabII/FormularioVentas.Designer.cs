@@ -171,6 +171,7 @@
             // 
             this.txtNombreVendedor.Location = new System.Drawing.Point(485, 443);
             this.txtNombreVendedor.Name = "txtNombreVendedor";
+            this.txtNombreVendedor.ReadOnly = true;
             this.txtNombreVendedor.Size = new System.Drawing.Size(100, 20);
             this.txtNombreVendedor.TabIndex = 10;
             // 
@@ -178,6 +179,7 @@
             // 
             this.txtApellidoVendedor.Location = new System.Drawing.Point(485, 480);
             this.txtApellidoVendedor.Name = "txtApellidoVendedor";
+            this.txtApellidoVendedor.ReadOnly = true;
             this.txtApellidoVendedor.Size = new System.Drawing.Size(100, 20);
             this.txtApellidoVendedor.TabIndex = 11;
             // 
@@ -215,6 +217,7 @@
             // 
             this.txtIDVendedor.Location = new System.Drawing.Point(485, 521);
             this.txtIDVendedor.Name = "txtIDVendedor";
+            this.txtIDVendedor.ReadOnly = true;
             this.txtIDVendedor.Size = new System.Drawing.Size(100, 20);
             this.txtIDVendedor.TabIndex = 15;
             // 
@@ -394,6 +397,7 @@
             // 
             this.txtTurno.Location = new System.Drawing.Point(604, 521);
             this.txtTurno.Name = "txtTurno";
+            this.txtTurno.ReadOnly = true;
             this.txtTurno.Size = new System.Drawing.Size(48, 20);
             this.txtTurno.TabIndex = 31;
             // 

@@ -55,35 +55,59 @@ namespace ParcialLabII
 
             this.dtgAgregarProducto.DataSource = Comercio.Productos;
             this.dtgAgregarProducto.DataSource = null;
-            this.dtgAgregarProducto.DataSource = Comercio.Productos;
-
-
+            this.dtgAgregarProducto.DataSource = Comercio.Productos;         
         }
 
+        /// <summary>
+        /// Agrega un nuevo producto a la lista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCrearProducto_Click(object sender, EventArgs e)
         {
 
-            tmrAgregarProducto.Stop();
-            float precio;
-            int stock;
-
-
-            precio = float.Parse(this.txtPrecio.Text);
-            stock = int.Parse(this.txtStock.Text);
-
-            MiProducto = new Producto(this.txtCodigo.Text, this.txtNombre.Text, precio, stock);
-
-            if (Comercio.Productos + MiProducto)
+            try
             {
-                MessageBox.Show("Agregado con exito");
+                tmrAgregarProducto.Stop();
+                float precio;
+                int stock;
+
+                precio = float.Parse(this.txtPrecio.Text);
+                stock = int.Parse(this.txtStock.Text);
+
+                if (string.IsNullOrWhiteSpace(this.txtNombre.Text) == false && string.IsNullOrWhiteSpace(this.txtCodigo.Text) == false)
+                {
+                    MiProducto = new Producto(this.txtCodigo.Text, this.txtNombre.Text, precio, stock);
+
+                    if (Comercio.Productos + MiProducto)
+                    {
+                        MessageBox.Show("Agregado con exito");
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Se ha agregado Stock a Producto: {MiProducto.Nombre}");
+                    }
+
+                    this.DialogResult = DialogResult.OK;
+                }
+
+                else
+                {
+                    throw new Excepciones("faltan datos para cargar el nuevo producto");
+                }
+                    
+            }
+            catch (Excepciones ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-            else
+            catch(FormatException ex)
             {
-                MessageBox.Show($"Se ha agregado Stock a Producto: {MiProducto.Nombre}");
+                MessageBox.Show(ex.Message);
             }
-
-            this.DialogResult = DialogResult.OK;
+            
         }
 
         private void tmrAgregarProducto_Tick(object sender, EventArgs e)
@@ -102,6 +126,11 @@ namespace ParcialLabII
 
         }
 
+        /// <summary>
+        /// cargo los textbox con datos de datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dtgAgregarProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
              this.txtCodigo.Text = dtgAgregarProducto.CurrentRow.Cells[0].Value.ToString();
@@ -110,6 +139,64 @@ namespace ParcialLabII
              this.txtNombre.Enabled = false;
              this.txtPrecio.Text = dtgAgregarProducto.CurrentRow.Cells[2].Value.ToString();
              this.txtPrecio.Enabled = false;
+        }
+
+        /// <summary>
+        /// Elimino un producto de la lista de productos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float precio;
+            int stock;
+
+            try
+            {
+                precio = float.Parse(this.txtPrecio.Text);
+                stock = int.Parse(this.txtStock.Text = dtgAgregarProducto.CurrentRow.Cells[3].Value.ToString());
+
+                if (string.IsNullOrWhiteSpace(this.txtNombre.Text) == false && string.IsNullOrWhiteSpace(this.txtCodigo.Text) == false)
+                {
+                    MiProducto = new Producto(this.txtCodigo.Text, this.txtNombre.Text, precio, stock);
+
+                    this.txtStock.Text = "";
+
+                    if (Comercio.Productos - MiProducto)
+                    {
+                        MessageBox.Show("Producto eliminado de inventario", "Alerta Inventario");
+                        this.dtgAgregarProducto.DataSource = Comercio.Productos;
+                        this.dtgAgregarProducto.DataSource = null;
+                        this.dtgAgregarProducto.DataSource = Comercio.Productos;
+
+                        this.DialogResult = DialogResult.OK;
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("No existe producto seleccionado en este inventario", "Alerta Inventario");
+                    }
+                }
+
+                else
+                {
+                    throw new Excepciones("faltan datos del producto a eliminar");
+                }
+
+            }
+
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message);
+               
+            }
+
+            catch (Excepciones ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
         }
     }
 }

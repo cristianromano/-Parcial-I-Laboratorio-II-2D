@@ -59,8 +59,12 @@ namespace ParcialLabII
             apu = new SoundPlayer();
 
             this.dtgEmpleado.Columns[2].Visible = false;
+            this.txtPrecioTotal.Text = "0";
         }
 
+        /// <summary>
+        /// funcion para darle transparencia a los labels
+        /// </summary>
         private void transparenteLabels()
         {
             lbApellidoVenta.Parent = pctbLogoVentas;
@@ -107,37 +111,64 @@ namespace ParcialLabII
 
         }
 
+        /// <summary>
+        /// agrego una nueva venta y un nuevo cliente (en caso de no existir previamente) a sus respectivas listas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptarVentas_Click(object sender, EventArgs e)
         {
 
-            tmrFormVenta.Stop();
-
-            sonidoCaja.Stream = Properties.Resources.caja;
-            sonidoCaja.Play();
-
-            int id = int.Parse(this.txtIDVendedor.Text);
-
-            MiVenta = new Venta(this.txtNombreVendedor.Text, txtApellidoVendedor.Text, id, ListaProductos);
-
-            if (Comercio.Ventas + MiVenta)
+            try
             {
-                MessageBox.Show($"Venta exitosa!");
+                if (string.IsNullOrWhiteSpace(this.txtNombreVentas.Text) == false && string.IsNullOrWhiteSpace(this.txtApellidoVentas.Text) == false
+                    && string.IsNullOrWhiteSpace(this.txtNombreVendedor.Text) == false && string.IsNullOrWhiteSpace(this.txtApellidoVendedor.Text) == false)
+                {
+                    int id = int.Parse(this.txtIDVendedor.Text);
+
+                    MiVenta = new Venta(this.txtNombreVendedor.Text, txtApellidoVendedor.Text, id, ListaProductos);
+
+                    if (Comercio.Ventas + MiVenta)
+                    {
+                        MessageBox.Show($"Venta exitosa!");
+                    }
+
+                    this.dtgVentas.DataSource = null;
+
+                    this.btnAgregarProducto.Enabled = false;
+
+                    this.btnAceptarVentas.Enabled = false;
+
+                    MiCliente = new Cliente(this.txtNombreVentas.Text, this.txtApellidoVentas.Text);
+
+                    if (Comercio.Clientes + MiCliente)
+                    {
+                        MessageBox.Show(MiCliente.registro());
+                        this.dtgClientes.DataSource = Comercio.Clientes;
+                        this.dtgClientes.DataSource = null;
+                        this.dtgClientes.DataSource = Comercio.Clientes;
+                    }
+
+                    tmrFormVenta.Stop();
+                    sonidoCaja.Stream = Properties.Resources.caja;
+                    sonidoCaja.Play();
+                }
+
+                else
+                {
+                    throw new Excepciones("faltan datos para poder generar el reporte");
+                }
+
             }
 
-            this.dtgVentas.DataSource = null;
-
-            this.btnAgregarProducto.Enabled = false;
-
-            this.btnAceptarVentas.Enabled = false;
-
-            MiCliente = new Cliente(this.txtNombreVentas.Text, this.txtApellidoVentas.Text);
-
-            if (Comercio.Clientes + MiCliente)
+            catch (FormatException ex)
             {
-                MessageBox.Show(MiCliente.registro());
-                this.dtgClientes.DataSource = Comercio.Clientes;
-                this.dtgClientes.DataSource = null;
-                this.dtgClientes.DataSource = Comercio.Clientes;
+                MessageBox.Show(ex.Message);
+            }
+
+            catch (Excepciones ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -199,6 +230,11 @@ namespace ParcialLabII
 
         }
 
+        /// <summary>
+        /// agrego datos a textbox del COMPRADOR extraidos del datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dtgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtNombreVentas.Text = dtgClientes.CurrentRow.Cells[1].Value.ToString();
@@ -209,6 +245,11 @@ namespace ParcialLabII
             this.txtIDCliente.Enabled = false;
         }
 
+        /// <summary>
+        /// agrego datos a textbox del VENDEDOR extraidos del datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dtgEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtNombreVendedor.Text = dtgEmpleado.CurrentRow.Cells[3].Value.ToString();
@@ -221,6 +262,11 @@ namespace ParcialLabII
             this.txtTurno.Enabled = false;
         }
 
+        /// <summary>
+        /// funcion en caso de que el usuario cierre el formulario sin haber realizado una compra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormularioVentas_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -239,6 +285,11 @@ namespace ParcialLabII
 
         }
 
+        /// <summary>
+        /// funcion que va contando el tiempo para cerrar el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tmrFormVenta_Tick(object sender, EventArgs e)
         {
             conteo++;
@@ -254,57 +305,79 @@ namespace ParcialLabII
 
         }
 
+        /// <summary>
+        /// genero ticket de compra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTicket_Click(object sender, EventArgs e)
         {
-            string directorio = Directory.GetCurrentDirectory();
-
-            float descuento = 0;
-
-            // SE CREA EN C:\Users\Cristian\Desktop\ParcialLabII-2D\Parcial1Lab\PaginaPrincipal\bin\Debug;
-
-            StreamWriter sw = new StreamWriter(string.Concat(directorio, "/tickets.txt"), false);
-
-            sw.WriteLine($"------------------------------");
-            sw.WriteLine("TICKET DE COMPRA KWIK E MART");
-            sw.WriteLine($"------------------------------");
-            sw.WriteLine($"Hora: {DateTime.Now.ToString("G")}");
-            sw.WriteLine($"------------------------------");
-            sw.WriteLine($"Empleado: {this.txtNombreVendedor.Text},{this.txtApellidoVendedor.Text} ");
-            sw.WriteLine($"------------------------------");
-            sw.WriteLine($"ID: {this.txtIDVendedor.Text}");
-            sw.WriteLine($"------------------------------");
-            sw.WriteLine($" ");
-            sw.WriteLine($" ");
-            sw.WriteLine($"------------------------------");
-            sw.WriteLine($"Productos vendidos x listado ");
-            sw.WriteLine($"------------------------------");
-
-            foreach (Producto item in ListaProductos)
+            try
             {
-                float acumulador = 0;
+                if (string.IsNullOrWhiteSpace(this.txtNombreVentas.Text) == false && string.IsNullOrWhiteSpace(this.txtApellidoVentas.Text) == false
+                    && string.IsNullOrWhiteSpace(this.txtNombreVendedor.Text) == false && string.IsNullOrWhiteSpace(this.txtApellidoVendedor.Text) == false)
+                {
+                    string directorio = Directory.GetCurrentDirectory();
+                    float descuento = 0;
 
-                sw.WriteLine($"Item: {item.Nombre} x Precio: {item.Precio}");
-                sw.WriteLine($"------------------------------");
-                acumulador += item.Precio;
+                    StreamWriter sw = new StreamWriter(string.Concat(directorio, "/tickets.txt"), false);
+
+                    sw.WriteLine($"------------------------------");
+                    sw.WriteLine("TICKET DE COMPRA KWIK E MART");
+                    sw.WriteLine($"------------------------------");
+                    sw.WriteLine($"Hora: {DateTime.Now.ToString("G")}");
+                    sw.WriteLine($"------------------------------");
+                    sw.WriteLine($"Empleado: {this.txtNombreVendedor.Text},{this.txtApellidoVendedor.Text} ");
+                    sw.WriteLine($"------------------------------");
+                    sw.WriteLine($"ID: {this.txtIDVendedor.Text}");
+                    sw.WriteLine($"------------------------------");
+                    sw.WriteLine($" ");
+                    sw.WriteLine($" ");
+                    sw.WriteLine($"------------------------------");
+                    sw.WriteLine($"Productos vendidos x listado ");
+                    sw.WriteLine($"------------------------------");
+
+                    foreach (Producto item in ListaProductos)
+                    {
+                        float acumulador = 0;
+
+                        sw.WriteLine($"Item: {item.Nombre} x Precio: {item.Precio}");
+                        sw.WriteLine($"------------------------------");
+                        acumulador += item.Precio;
+                    }
+
+                    if (this.txtApellidoVentas.Text.Equals("Simpson"))
+                    {
+                        descuento = (acumulador * 13) / 100;
+                        acumulador -= descuento;
+
+                        sw.WriteLine($"DESCUENTO DEL %13 POR SER SIMPSON ");
+                        sw.WriteLine($"------------------------------");
+                    }
+
+                    sw.WriteLine($"Precio Final: {acumulador}");
+                    sw.WriteLine($"------------------------------");
+                    sw.WriteLine($"GRACIAS POR TU COMPRA REY");
+                    sw.Close();
+
+                    MessageBox.Show("TICKET GENERADO CON EXITO!", "TICKET X TU COMPRA <3");
+                }
+
+                else
+                {
+                    throw new Excepciones("no se puede generar tickets sin datos");
+                }
+            }
+            catch (Excepciones ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-            if (this.txtApellidoVentas.Text.Equals("Simpson"))
+            catch (FormatException ex)
             {
-                descuento = (acumulador * 13) / 100;
-
-                acumulador -= descuento;
-
-                sw.WriteLine($"DESCUENTO DEL %13 POR SER SIMPSON ");
-                sw.WriteLine($"------------------------------");
-
+                MessageBox.Show(ex.Message);
             }
 
-            sw.WriteLine($"Precio Final: {acumulador}");
-            sw.WriteLine($"------------------------------");
-            sw.WriteLine($"GRACIAS POR TU COMPRA REY");
-            sw.Close();
-
-            MessageBox.Show("TICKET GENERADO CON EXITO!", "TICKET X TU COMPRA <3");
         }
 
     }
